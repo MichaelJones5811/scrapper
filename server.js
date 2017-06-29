@@ -37,10 +37,13 @@ var routes = require("./controller/apiRoutes.js");
 // site routes
 app.use("/", routes);
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/scraper_db");
+mongoose.connect("mongodb://whtmymfnam:Jordan23!@ds135812.mlab.com:35812/scraper_db");
 //mongoose.connect("mongodb://localhost/week18day3mongoose");
 //mongoose.connect("mongodb://whtmymfnam:password1@ds135812.mlab.com:35812/scraper_db");
 //mongodb://<whtmymfnam>:<password1>@ds135812.mlab.com:35812/scraper_db
+
+//mongodb://whtmymfnam:Jordan23!@ds135812.mlab.com:35812/scraper_db
+
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -53,6 +56,8 @@ db.once("open", function() {
   console.log("Mongoose connection successful.");
 });
 // Listen on port 3000
-app.listen(3000, function() {
-  console.log("App running on port 3000!");
+var port = process.env.PORT || 3000;
+
+app.listen(port, function() {
+    console.log("App is running on port " + port);
 });

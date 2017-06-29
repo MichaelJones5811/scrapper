@@ -89,7 +89,7 @@ router.get("/articles/:id", function(req, res) {
     }
     // Otherwise, send the doc to the browser as a json object
     else {
-      console.log(doc);
+      
       res.json(doc);
     }
   });
@@ -122,7 +122,7 @@ router.post("/articles/:id", function(req, res) {
     else {
 
       // Use the article id to find and update it's note
-      Article.findOneAndUpdate({ "_id": req.params.id },  {$push:{ note: doc._id }})
+      Article.findOneAndUpdate({ "_id": req.params.id },{"note": doc._id })
       // Execute the above query
       .exec(function(err, doc) {
         // Log any errors
