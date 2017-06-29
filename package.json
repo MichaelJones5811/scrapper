@@ -1,0 +1,28 @@
+{
+  "name": "scrapper",
+  "version": "1.0.0",
+  "description": "app that scrapes a website and returns data to the dom",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelJones5811/scrapper.git"
+  },
+  "author": "Michael Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelJones5811/scrapper/issues"
+  },
+  "homepage": "https://github.com/MichaelJones5811/scrapper#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "mongoose": "^4.4.6",
+    "express-handlebars": "^3.0.0",
+    "morgan": "^1.8.2",
+    "request": "^2.81.0"
+  }
+}
